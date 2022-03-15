@@ -13,10 +13,11 @@ public class OrderController {
 
     private final OrderRepository orderRepository;
 
-    @PostMapping(consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE })
+    @PostMapping(consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = { MediaType.TEXT_HTML_VALUE })
     @ResponseStatus(HttpStatus.CREATED)
-    public void order(@RequestBody Order order) {
+    public String order(@RequestBody Order order) {
         orderRepository.save(order);
+        return "<html><body>success</body></html>";
     }
 
 }
