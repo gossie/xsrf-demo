@@ -13,7 +13,7 @@ public class OrderController {
 
     private final OrderRepository orderRepository;
 
-    @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    @PostMapping(consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE })
     @ResponseStatus(HttpStatus.CREATED)
     public void order(@RequestBody Order order) {
         orderRepository.save(order);
