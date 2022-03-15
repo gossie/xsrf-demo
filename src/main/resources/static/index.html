@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Shop</title>
+        <script type="text/javascript">
+
+            function buy() {
+                fetch("/api/orders", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        product: document.getElementById('product'),
+                        name: document.getElementById('name'),
+                        street: document.getElementById('street'),
+                        zip: document.getElementById('zip'),
+                        city: document.getElementById('city'),
+                    })
+                });
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <label for="product">Produkt</label> <input type="text" id="product" />
+        <label for="name">Name</label> <input type="text" id="name" />
+        <label for="street">Straße</label> <input type="text" id="street" />
+        <label for="zip">PLZ</label> <input type="text" id="zip" />
+        <label for="city">PLZ</label> <input type="text" id="city" />
+        <button onclick="buy()">Kaufen</button>
+    </body>
+</html>
