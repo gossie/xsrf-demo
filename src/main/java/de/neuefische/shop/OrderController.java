@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin
+@CrossOrigin(origins = "https://www.andreschreck.de/xsrf-example.html")
 @RequiredArgsConstructor
 public class OrderController {
 
