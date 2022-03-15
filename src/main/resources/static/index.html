@@ -10,11 +10,11 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        product: document.getElementById('product'),
-                        name: document.getElementById('name'),
-                        street: document.getElementById('street'),
-                        zip: document.getElementById('zip'),
-                        city: document.getElementById('city'),
+                        product: document.getElementById('product').value,
+                        name: document.getElementById('name').value,
+                        street: document.getElementById('street').value,
+                        zip: document.getElementById('zip').value,
+                        city: document.getElementById('city').value,
                     })
                 });
             }
