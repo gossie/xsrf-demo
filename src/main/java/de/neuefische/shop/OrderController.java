@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = "https://www.andreschreck.de/xsrf-example.html", methods = RequestMethod.POST)
+@CrossOrigin(origins = "https://www.andreschreck.de", methods = RequestMethod.POST)
 @RequiredArgsConstructor
 public class OrderController {
 
