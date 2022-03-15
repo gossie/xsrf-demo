@@ -17,5 +17,6 @@ public class Order {
     private String street;
     private String zip;
     private String city;
+    private String loggedInUser;
 
 }
