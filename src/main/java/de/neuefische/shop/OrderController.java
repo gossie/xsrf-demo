@@ -16,7 +16,7 @@ public class OrderController {
 
     @PostMapping(consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = { MediaType.TEXT_HTML_VALUE })
     @ResponseStatus(HttpStatus.CREATED)
-    public String order(MultiValueMap<String, String> paramMap) {
+    public String order(@RequestParam MultiValueMap<String, String> paramMap) {
         orderRepository.save(new Order(null, paramMap.getFirst("product"), paramMap.getFirst("name"), paramMap.getFirst("street"), paramMap.getFirst("zip"), paramMap.getFirst("city")));
         return "<html><body>success</body></html>";
     }
