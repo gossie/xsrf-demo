@@ -10,7 +10,6 @@ import java.security.Principal;
 
 @RestController
 @RequestMapping("/api/orders")
-//@CrossOrigin(origins = "https://www.andreschreck.de", methods = RequestMethod.POST)
 @RequiredArgsConstructor
 public class OrderController {
 
